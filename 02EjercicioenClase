@@ -1,0 +1,59 @@
+
+#Usemos lo que hemos aprendido de flujo de control y condicionantes para clasificar la edad, supongamos que tienes encuestas 
+#de salud de una población amplia y quieres clasificar a los encuestados según su edad para comenzar a hacer estadística. 
+#Para ello recopilaste el dato Edad. Los registros que tienes se parecen a estos de abajo, donde recopilas género, edad, 
+#cantidad de hijos, colonia, salario mensual, si padecen de diabetes:
+#Agrega un último valor a cada registro que represente la clasificación según la edad. Usa un for loop, las comparaciones que 
+#consideres necesarias, los elifs que consideres necesarios y las dobles condicionales que consideres necesarias y append.
+
+#lista de encuestados
+encuestados = [['Femenino', 38, 2, "Nuevo Repueblo", "de 0 a 5,000", False],
+               ['Femenino', 19, 0, "Contry La silla", "de 10,000 a 15,000", False],
+               ['Masculino', 22, 1, "Fomerrey 22", "de 0 a 5,000", False],
+               ['Masculino', 70, 3, "Valle Verde", "de 5,000 a 7,000", True],
+               ['Femenino', 57, 4, "Centro", "de 7,000 a 10,000", False],
+               ['Femenino', 44, 0, "Valle Alto", "de 30,000 a 50,000", False],
+               ['Femenino', 20, 2, "Burócratas Municipales", "de 5,000 a 7,000", True],
+               ['Masculino', 19, 0, "Buenos Aires", "de 10,000 a 13,000", True],
+               ['Femenino', 12, 0, "Obrera", "de 5,000 a 7,000", True],
+               ['Masculino', 32, 3, "Contry Sol", "de 10,000 a 15,000", False],
+               ['Femenino', 87, 9, "Del Paseo", "de 15,000 a 20,000", True],
+               ['Femenino', 25, 1, "Roma", "de 20,000 a 25,000", False],
+               ['Masculino', 65, 3, "Estadio", "de 10,000 a 15,000", True]]
+# Dificultad normal:
+# edad mayor a 20: no-joven
+# edad menor a 20: joven
+# dificultad insanity:
+rango_de_edades = { "joven": [10, 19],
+                    "millenial": [20, 35],
+                    "super adulto": [36, 300]
+                    }
+
+#edad = encuesta[1] donde se encuentra la edad
+print("aqui apenas define la funcion.........")
+
+def checa_edad(edad,encuesta):
+    if edad >=10 and edad <=19:
+        encuesta.append("joven")
+    elif edad>=20 and edad <=35:
+        encuesta.append("millenial")
+    elif edad >=36 and edad <=300:
+        encuesta.append("super adulto")
+#codigo simple reemplazado por la funcion
+# for encuesta in encuestados:
+#     print(encuesta)
+    # if encuesta[1] >= 10 and encuesta[1] <= 19:
+    #     encuesta.append("joven")
+    # elif encuesta[1] >= 20 and encuesta[1] <=35:
+    #     encuesta.append("millenial")
+    # elif encuesta[1] >= 36 and encuesta[1] <= 300:
+    #     encuesta.append("super adulto")
+
+#encuesta equivale a cada registro del dataset encuestados
+print("aqui va a imprimir el registro con el nuevo campo")
+for i,encuesta in enumerate(encuestados):
+    print(i,encuesta)
+    checa_edad(encuesta[1],encuesta)
+print("aqui termine de añadirle campos al dataset..... ")
+for i,encuesta in enumerate(encuestados):
+    print(i,encuesta)
