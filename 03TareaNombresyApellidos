@@ -40,6 +40,7 @@ for i, registro in enumerate(nombres):
         soloapellidos.append(nom_separado[-3]+" "+nom_separado[-2]+" "+nom_separado[-1])
     else:
         soloapellidos.append(nom_separado[-2]+" "+nom_separado[-1])
+    #aqui construye el nombre
     cadena_nombres=registro.split(soloapellidos[-1])
     solonombres.append(cadena_nombres[0])
 print("Lista de apellidos.....")
