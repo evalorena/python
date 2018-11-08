@@ -1,0 +1,30 @@
+#ejercicio de tarea 1   6/nov/2018
+#Ejercicio. Usando el dataset de las edades de las encuestas del club de fans de Luismi,
+#agrega 7 registros más, y después, utilizando los bucles (o sea los loops) y la función
+#.append() imagina una forma de hacer un loop con una lista nueva con sólo las edades de
+#los encuestados.
+#
+#encuesta para saber si son fans de Luismi
+encuesta = [['Margarita Pérez', 28, 'margarita@gmail.com', 'Mujer', True],
+            ['Milton Pérez', 20, 'milton@gmail.com', 'Hombre', True],
+            ['Andrés García', 58, 'Andres@gmail.com', 'Hombre', False],
+            ['Gloria Trevi', 38, 'gloria@gmail.com', 'Mujer', True]]
+print(encuesta)
+print("................\n")
+#llendo de datos nuevos
+datosnuevos = [ ['Alonso Gonzáles', 32, 'alonsitobonito@gmail.com', 'Hombre', True],
+                ['Diana Cazadora',22,'diana1111@gmail.com','Mujer', False],
+                ['Albert Camus',45,'camus@gmail.com','Hombre',False],
+                ['Wei WuXian',27, 'weixuxian@gmail.com','Hombre', False],
+                ['Ada Mtz',32,'ada@gmail.com','Mujer',True],
+                ['Ya Meaburri',26,'brrido@gmail.com','Hombre',True],
+                ['yey elultimo',54,'elultimo@gmail.com','Hombre',True]]
+print(datosnuevos)
+print("................\n")
+encuestanueva= encuesta + datosnuevos
+print(encuestanueva)
+soloedades=[]
+#for registro in encuesta:
+for registro in encuestanueva:
+    soloedades.append(registro[1])
+print(soloedades)
