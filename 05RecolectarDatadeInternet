@@ -10,5 +10,6 @@ print(my_request.text)
 print(type(my_request.text))
 
 my_request2 = requests.get('https://jsonplaceholder.typicode.com/posts/')
+#en esta parte recoge toooodos los post y el indice es ID no userID del 1 al 100
 # con esta opción podemos ver qué contiene el request que hicimos
 print(my_request2.text)
