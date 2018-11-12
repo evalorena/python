@@ -45,3 +45,4 @@ dict = {
 response = requests.request("GET", url, data=json.dumps(dict))
 print(type(response.json()))
 #termina mi prueba, aun no queda, lo transforma en lista....
+
